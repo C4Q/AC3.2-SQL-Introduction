@@ -1,6 +1,48 @@
 # Introduction to SQL
 
-Structured Query Language
+## Objective
+
+The goal and scope of this to expose the student to SQL through one example environment (AWS) 
+and software package (Sequel Pro). The basics of the language are introduced and a simple 
+relational problem is worked through.
+
+## Definitions 
+
+### SQL
+
+SQL (Structured Query Language) is a declarative language used to interact with a relational management 
+database system (RDBMS). Its statements are divided into two categories, DML and DDL, Data Manipulation
+Language and Data Definition Language, respectively. Both DDL and DML statements are sent to the database
+in the same way.
+
+### Statement
+
+Each individual unit of SQL is referred to as a statement. It can span more than one line and often does
+for readability. 
+
+### Declarative
+
+SQL is a declarative language. This means that its statements are written to describe/declare what the results
+should be, without any code defining _how_ the results are accomplished. (Swift, and the majority of languages
+by contrast, are imperative languages that allow for the expression of step-by-step algorithmic instructions).
+
+### DDL
+
+DDL, Data Definition Language, is the subset of SQL statements that operate on the structure of the database. 
+These operations are done first, chronologically, as DML depends on tables existing before it can be run. It is
+possible and common even, to return to the structure of the database and modify it. In more complicated environments
+DDL work might be the domain of a DBA (database administrator) and access to it restricted in order to prevent
+
+### DML
+
+DML, Data Manipulation Language, is the subset of SQL statements that read and write data from and to the 
+database. Generally, this is where more time is spent by the developer.
+
+
+### CRUD
+
+CRUD: Create, Read, Update and Delete. Create, here, corresponds not to SQL's DDL statement ```CREATE```, but 
+instead to its ```INSERT``` statement
 
 ## Environment 
 AWS RDS
@@ -49,3 +91,6 @@ select, insert, update, delete
 tables
 queries
 joins
+
+
+integrity - condider firebase. Consider the final. 
