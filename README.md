@@ -53,22 +53,37 @@ This lesson focuses on SQL in a client-server architecture.
 
 ## Environment 
 
+### Popular SQL Databases
+
+* MySQL
+* PostgreSQL
+* Oracle
+* SQL Server
+* SQLite
+
 ### Server - AWS RDS
 
-AWS (Amazon Web Services) is a comprehensive cloud computing product that offers both high level
-and low level interfaces to computing resources. Firebase, a Google product, by comparison only
+AWS (Amazon Web Services) is a large suite of cloud computing products, with a range of high level
+and low level interfaces to computing resources. Firebase, a Google product, as a point of reference only
 offers a few high level features (authentication, a NoSQL database and storage) using a SaaS model.
-AWS has introduced these 
+AWS has introduced these kinds of high level products but also has basic old-school services that 
+allow you to control a virtual machine or a database.
+
+Amazon's database product is named RDS, and we'll be using it today. We'll use Aurora or MySQL 
+depending on which one is free. Aurora is a cheaper MySQL clone which is more than enough for 
+our purposes or for anything you're likely to build on your own.
+
+
+#### Security
 
 A lot of what is difficult about AWS is security related. AWS uses VPC (Virtual Private Cloud)
-to isolate logical networks. It all happens in a network. Your application is usually running on a machine.
+to isolate logical networks. Being a client-server environment there needs to be security around
+who can access the database. The most tangible upshot of this is that you’ll have to make the db 
+accessible from your network. When you first set up your database there's an option to allow access
+from your network at the time but your network will change as you move and it may even change if you don't.
 
-The most tangible upshot of this is that you’ll have to make the db accessible from your network.
-And yourr network may change
-
-Aurora - A cheaper MySQL clone, good for our purposes.
-
-find the security group and change the inbound rules
+In order to open a new network to the database, find the security group and add a new inbound rule with 
+your current IP:
 
 ![Security Groups](security_groups.png)
 
@@ -76,18 +91,17 @@ find the security group and change the inbound rules
 
 There are myriad SQL front-end tools. Here, we will use Sequel Pro https://www.sequelpro.com/.
 
-Popular SQL implementations
+## Problem/Demo
 
-MySQL
-PostgreSQL
-Oracle
-SQL Server
-SQLite
-
+Game of Thrones is back. Let's explore how we'd model and store 
 
 ## Normalization
 
-Data Duplication is the devil
+> Data Duplication is the devil
+
+Normalization is an enormous topic tucked within the already enormous topic of SQL. Suffice to say for our
+scope that it is the prinicple and process of de-duplicating and organizing data through relationships. 
+This is the "relational" part of RDBMS.
 
 Relationships
 1:1
