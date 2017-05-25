@@ -51,6 +51,14 @@ central server that a variety of clients connect to and send SQL, listening for 
 notable and familiar exception is the SQLite database that (usually, and by default) backs Core Data. 
 This lesson focuses on SQL in a client-server architecture.
 
+### Table
+
+The basic unit for data modeling and storage.
+
+### Query
+
+The means by which we get data out of tables.
+
 ## Environment 
 
 ### Popular SQL Databases
@@ -104,28 +112,14 @@ scope that it is the prinicple and process of de-duplicating and organizing data
 This is the "relational" part of RDBMS.
 
 Relationships
-1:1
-1:∞
-∞:∞
 
-These three have overlapping meanings
-database
-schema
-user
+* 1:1
+* 1:∞
+* ∞:∞
 
-DDL Data Definition Language
-create, drop, alter
-create database got;
-use got;
+### Join
 
-
-DML Data Manipulation Language
-select, insert, update, delete
-
-tables
-queries
-joins
-
+Use joins to relate tables to one another during queries.
 
 ## Integrity 
 
@@ -135,8 +129,7 @@ dangling references, transations.
 Consider Firebase, specifically during the final. Each client that connects to Firebase can
 do whatever it wants to it.
 
-
 ## Efficiency
 
-Indexing
+We can index common fields to make queries using those fields as keys more performant.
 
