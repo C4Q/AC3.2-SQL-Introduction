@@ -66,7 +66,11 @@ to isolate logical networks. It all happens in a network. Your application is us
 The most tangible upshot of this is that you’ll have to make the db accessible from your network.
 And yourr network may change
 
+Aurora - A cheaper MySQL clone, good for our purposes.
+
 find the security group and change the inbound rules
+
+![Security Groups](security_groups.png)
 
 ## Tools
 
@@ -78,11 +82,11 @@ MySQL
 PostgreSQL
 Oracle
 SQL Server
-SQLite - slightly weird dialect of SQL
+SQLite
 
-Relational Database (RDBMS)
 
-Normalization
+## Normalization
+
 Data Duplication is the devil
 
 Relationships
@@ -109,4 +113,16 @@ queries
 joins
 
 
-integrity - condider firebase. Consider the final. 
+## Integrity 
+
+SQL gives us very powerful tools to ensure the integrity of the data. Control 
+dangling references, transations.
+
+Consider Firebase, specifically during the final. Each client that connects to Firebase can
+do whatever it wants to it.
+
+
+## Efficiency
+
+Indexing
+
