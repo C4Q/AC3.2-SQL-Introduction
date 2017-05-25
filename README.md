@@ -44,8 +44,21 @@ database. Generally, this is where more time is spent by the developer.
 CRUD: Create, Read, Update and Delete. Create, here, corresponds not to SQL's DDL statement ```CREATE```, but 
 instead to its ```INSERT``` statement
 
+### Client-Server
+
+Most of the time SQL database is accessed using a client-server architecture. The SQL database is a 
+central server that a variety of clients connect to and send SQL, listening for responses. One 
+notable and familiar exception is the SQLite database that (usually, and by default) backs Core Data. 
+This lesson focuses on SQL in a client-server architecture.
+
 ## Environment 
-AWS RDS
+
+### Server - AWS RDS
+
+AWS (Amazon Web Services) is a comprehensive cloud computing product that offers both high level
+and low level interfaces to computing resources. Firebase, a Google product, by comparison only
+offers a few high level features (authentication, a NoSQL database and storage) using a SaaS model.
+AWS has introduced these 
 
 A lot of what is difficult about AWS is security related. AWS uses VPC (Virtual Private Cloud)
 to isolate logical networks. It all happens in a network. Your application is usually running on a machine.
@@ -56,6 +69,9 @@ And yourr network may change
 find the security group and change the inbound rules
 
 ## Tools
+
+There are myriad SQL front-end tools. Here, we will use Sequel Pro https://www.sequelpro.com/.
+
 Popular SQL implementations
 
 MySQL
